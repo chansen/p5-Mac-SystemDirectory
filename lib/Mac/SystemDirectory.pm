@@ -1,4 +1,5 @@
 package Mac::SystemDirectory;
+# ABSTRACT: Locate Mac OS X Standard System Directories
 
 use 5.006000;
 use strict;
@@ -22,10 +23,6 @@ require Exporter;
 
 1;
 __END__
-
-=head1 NAME
-
-Mac::SystemDirectory - Locate Mac OS X Standard System Directories
 
 =head1 SYNOPSIS
 
@@ -319,17 +316,5 @@ in sets grouped by tag names. The tag names are:
 
 L<http://developer.apple.com/mac/library/DOCUMENTATION/Cocoa/Conceptual/LowLevelFileMgmt/Articles/StandardDirectories.html>
 L<http://developer.apple.com/mac/library/documentation/MacOSX/Conceptual/BPFileSystem/BPFileSystem.html>
-
-=head1 AUTHOR
-
-Christian Hansen, E<lt>chansen@cpan.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (C) 2009 by Christian Hansen
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.9 or,
-at your option, any later version of Perl 5 you may have available.
 
 =cut

@@ -1,18 +1,22 @@
-use inc::Module::Install;
+use strict;
+use warnings;
+
+$^O eq 'darwin' or die "OS unsupported\n";
+
+use lib 'inc';
+use ExtUtils::MakeMaker::Dist::Zilla::Develop;
+use ExtUtils::HasCompiler 0.014 'can_compile_loadable_object';
+
+die "Requires a compiler\n" if not can_compile_loadable_object(quiet => 1);
+
 use Config;
 
-($^O eq 'darwin')
-  || die("OS unsupported\n");
-
-all_from        'lib/Mac/SystemDirectory.pm';
-perl_version    '5.006';
-repository      'http://svn.ali.as/cpan/trunk/Mac-SystemDirectory/';
-bugtracker      'http://rt.cpan.org/Public/Dist/Display.html?Name=Mac-SystemDirectory';
-test_requires   'Test::More' => '0.86';
-makemaker_args  LDDLFLAGS => $Config{lddlflags} . ' -lobjc -framework CoreFoundation -framework Foundation';
-makemaker_args  DEFINE => '-ObjC -DHAS_BOOL';
-
-requires_external_cc;
-
-WriteAll;
-
+WriteMakefile(
+    NAME => 'Mac::SystemDirectory',
+    VERSION_FROM => 'lib/Mac/SystemDirectory.pm',
+    INSTALLMAN1DIR => 'none',
+    INSTALLMAN3DIR => 'none',
+    NORECURS => 1,
+    LDDLFLAGS => $Config{lddlflags} . ' -lobjc -framework CoreFoundation -framework Foundation',
+    DEFINE => '-ObjC -DHAS_BOOL',
+);

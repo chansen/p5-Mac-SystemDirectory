@@ -1,0 +1,16 @@
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/Mac-SystemDirectory-*/
+/Mac-SystemDirectory-*.tar.gz
+/Makefile
+/Makefile.old
+/MYMETA.*
+/pm_to_blib
+/*.bs
+/*.c
+/*.o
+/blib/
+/_eumm/
+/build/

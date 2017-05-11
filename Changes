@@ -1,4 +1,8 @@
-Revision history for Perl extension Mac::SystemDirectory.
+Revision history for Mac::SystemDirectory
+
+{{$NEXT}}
+    - convert packaging to Dist::Zilla (fixes RT#121403)
+
 0.06 2011-02-12 16:00
     - Detect correct target Mac OS version in tests (cross-compilation), patch by Mark Dootson (RT #65573)
 
