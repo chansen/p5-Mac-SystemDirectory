@@ -1,6 +1,7 @@
 Revision history for Mac::SystemDirectory
 
 {{$NEXT}}
+    - fixed link to git repository in metadata
 
 0.07      2017-05-11 13:06:22Z
     - convert packaging to Dist::Zilla (fixes RT#121403)
