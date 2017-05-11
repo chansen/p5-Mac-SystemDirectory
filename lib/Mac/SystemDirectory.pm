@@ -4,22 +4,21 @@ use 5.006000;
 use strict;
 use warnings;
 
-BEGIN {
-    our $VERSION     = '0.07';
-    our @EXPORT_OK   = ('FindDirectory', 'HomeDirectory', 'TemporaryDirectory');
+our $VERSION = '0.07';
 
-    require XSLoader;
-    XSLoader::load('Mac::SystemDirectory', $VERSION);
+our @EXPORT_OK   = ('FindDirectory', 'HomeDirectory', 'TemporaryDirectory');
 
-    our %EXPORT_TAGS = (
-        'all'        => [ @EXPORT_OK ],
-        'DomainMask' => [ grep { /^NS.*DomainMask/ } @EXPORT_OK ],
-        'Directory'  => [ grep { /^NS.*Directory/  } @EXPORT_OK ],
-    );
+require XSLoader;
+XSLoader::load('Mac::SystemDirectory', $VERSION);
 
-    require Exporter;
-    *import = \&Exporter::import;
-}
+our %EXPORT_TAGS = (
+    'all'        => [ @EXPORT_OK ],
+    'DomainMask' => [ grep { /^NS.*DomainMask/ } @EXPORT_OK ],
+    'Directory'  => [ grep { /^NS.*Directory/  } @EXPORT_OK ],
+);
+
+require Exporter;
+*import = \&Exporter::import;
 
 1;
 __END__
