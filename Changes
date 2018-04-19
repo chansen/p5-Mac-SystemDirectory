@@ -1,6 +1,7 @@
 Revision history for Mac::SystemDirectory
 
 {{$NEXT}}
+    - patch MakeMaker subs to fix issues on various versions of gcc (RT#73539)
 
 0.10      2017-05-11 15:21:38Z
     - actually load EUHC from inc (RT#121613)
