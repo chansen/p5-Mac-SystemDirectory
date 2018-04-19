@@ -18,7 +18,7 @@ WriteMakefile(
     INSTALLMAN3DIR => 'none',
     NORECURS => 1,
     LDDLFLAGS => $Config{lddlflags} . ' -lobjc -framework CoreFoundation -framework Foundation',
-    DEFINE => '-ObjC -DHAS_BOOL',
+    DEFINE => '-DHAS_BOOL',
 );
 
 # fix compilation issues on Darwin: see RT#73539
