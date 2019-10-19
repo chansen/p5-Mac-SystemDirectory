@@ -5,7 +5,7 @@ use 5.006000;
 use strict;
 use warnings;
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 our @EXPORT_OK   = ('FindDirectory', 'HomeDirectory', 'TemporaryDirectory');
 
