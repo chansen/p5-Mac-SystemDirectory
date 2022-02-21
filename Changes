@@ -1,6 +1,6 @@
 Revision history for Mac::SystemDirectory
 
-{{$NEXT}}
+0.14      2022-02-21 05:33:23Z
     - update bundled version of ExtUtils::HasCompiler, for new new Apple
       include paths (GH #1)
 
